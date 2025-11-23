@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+<h2>Edit Event</h2>
+
+<form action="/events/edit/<%= event._id %>" method="POST">
+
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" value="<%= event.title %>">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Date</label>
+    <input type="date" name="date" class="form-control"
+           value="<%= event.date.toISOString().split('T')[0] %>">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Location</label>
+    <input type="text" name="location" class="form-control" value="<%= event.location %>">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="description" class="form-control"><%= event.description %></textarea>
+  </div>
+
+  <button class="btn btn-success">Save Changes</button>
+</form>
+
+<%- include("partials/footer") %>

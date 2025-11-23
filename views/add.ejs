@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<h2>Add Event</h2>
+
+<form action="/events/add" method="POST">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Date</label>
+    <input type="date" name="date" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Location</label>
+    <input type="text" name="location" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="description" class="form-control"></textarea>
+  </div>
+
+  <button class="btn btn-primary">Create</button>
+</form>
+
+<%- include("partials/footer") %>
