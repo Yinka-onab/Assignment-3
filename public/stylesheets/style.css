@@ -1,14 +1,22 @@
 
 body {
-  background: linear-gradient(180deg,#f3f7fb 0%, #ffffff 100%);
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #222;
+  background-color: #007BFF; 
+  color: white; 
 }
+
 .navbar-brand img { margin-right: 8px; }
 .table thead.table-dark th {
   background: linear-gradient(90deg,#003366,#006699);
   color: white;
 }
 .card { border-radius: 8px; }
-.btn-primary { background: linear-gradient(90deg,#0077cc,#005fa3); border: none; }
+.btn-primary {
+  background-color: #dc3545; 
+  border-color: #dc3545;
+}
+
+.btn-primary:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
 footer { border-top: 1px solid rgba(0,0,0,0.05); }
