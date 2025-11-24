@@ -1,10 +1,16 @@
-<%- include("partials/header") %>
+<%- include("partials/header", { title: "Home" }) %>
 
 <div class="container mt-5">
   <div class="text-center">
-    <img src="/images/eventhub.png" width="120" alt="EventHub Logo">
+
+    <!-- Logo -->
+    <img src="/images/eventhub.png" width="120" alt="EventHub Logo" />
+
+    <!-- Title -->
     <h1 class="mt-3">Welcome to EventHub</h1>
     <p class="lead">Track and manage events from earliest to latest with ease.</p>
+
+    <!-- Button -->
     <a href="/events" class="btn btn-primary mt-4">View Events</a>
   </div>
 </div>
