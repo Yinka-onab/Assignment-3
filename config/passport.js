@@ -1,3 +1,5 @@
+require('dotenv').config(); // Load .env variables
+
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const GitHubStrategy = require('passport-github2').Strategy;
@@ -29,7 +31,6 @@ module.exports = function(passportInstance) {
       const providerId = profile.id;
       const existing = await User.findOne({ provider, providerId });
       if (existing) return done(null, existing);
-      // create
       const user = await User.create({
         provider,
         providerId,
@@ -54,7 +55,6 @@ module.exports = function(passportInstance) {
       const providerId = profile.id;
       const existing = await User.findOne({ provider, providerId });
       if (existing) return done(null, existing);
-      // email may be in profile.emails
       const email = (profile.emails && profile.emails[0] && profile.emails[0].value) || '';
       const user = await User.create({
         provider,
